@@ -2,7 +2,7 @@
 
 @section('content')
     <header>
-        <h1>Join Our Personalized Referral</h1>
+        <h1>Join Our Personalized Saving Campaign</h1>
         <p>Earn RM25 for every friend you refer!</p>
     </header>
 
