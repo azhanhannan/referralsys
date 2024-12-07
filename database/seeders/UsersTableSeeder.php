@@ -33,6 +33,34 @@ class UsersTableSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'name' => 'Alice Johnson',
+                'email' => 'alice@example.com',
+                'referral_code' => Str::random(10),
+                'bonus_balance' => 0.00,
+                'password' => bcrypt('password123'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Bob Brown',
+                'email' => 'bob@example.com',
+                'referral_code' => Str::random(10),
+                'bonus_balance' => 0.00,
+                'password' => bcrypt('password123'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Charlie Wilson',
+                'email' => 'charlie@example.com',
+                'referral_code' => Str::random(10),
+                'bonus_balance' => 0.00,
+                'password' => bcrypt('password123'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            
         ]);
     }
 }
