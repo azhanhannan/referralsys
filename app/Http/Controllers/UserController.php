@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
 class UserController extends Controller
 {
     public function index() {
-        $users = User::all();
+        $users = User::orderBy('bonus_balance', 'DESC')->get();
         return view('list.users', compact('users'));
     }
 
