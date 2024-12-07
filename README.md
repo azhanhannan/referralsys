@@ -47,15 +47,28 @@ Copy the .env.example file to .env and configure your environment variables:
 cp .env.example .env
 ```
 
+Before running the Laravel migrations, create a database in your MySQL server for the project. Follow the steps below:
+
+Open your MySQL CLI or GUI Tool (e.g., phpMyAdmin, MySQL Workbench, SQLyog, Dbeaver).
+
+Run the following SQL command to create a new database:
+
+```sql
+CREATE DATABASE referralsys;
+```
+Replace referralsys with your preferred database name if needed.
+
 Set up the database configuration in the .env file:
 ```bash
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=your_database_name
+DB_DATABASE=referralsys
 DB_USERNAME=your_database_user
 DB_PASSWORD=your_database_password
 ```
+Replace your_database_username and your_database_password with your MySQL credentials.
+
 
 ### 4. Generate Application Key
 Run the following command to generate a new application key:
