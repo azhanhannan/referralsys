@@ -27,8 +27,8 @@
                         @foreach($referrals as $referral)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $referral->user->name }}</td>
-                                <td>{{ $referral->user->email }}</td>
+                                <td>{{ $referral->referral_detail->name }}</td>
+                                <td>{{ $referral->referral_detail->email }}</td>
                             </tr>
                         @endforeach
                     @endif

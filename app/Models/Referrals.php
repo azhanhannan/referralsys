@@ -11,8 +11,8 @@ class Referrals extends Model
 {
     use HasFactory;
 
-    public function user()
+    public function referral_detail()
     {
-        return $this->hasOne(User::class, 'id', 'fk_users');
+        return $this->hasOne(User::class, 'id', 'fk_users_referral');
     }
 }
