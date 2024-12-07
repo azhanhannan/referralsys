@@ -41,10 +41,10 @@
                                 <td>{{ number_format($user->bonus_balance, 2) }}</td>
                             </tr>
                         @endforeach
-                    @else
+                    {{-- @else
                         <tr>
                             <td colspan="6">No users found</td>
-                        </tr>
+                        </tr> --}}
                     @endif
                 </tbody>
             </table>
