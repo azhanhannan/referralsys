@@ -22,6 +22,14 @@ class UserController extends Controller
     public function store(Request $request)
     {
 
+        $ReferralCode = $this->generateReferralCode();
+
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|min:8',
+        ]);
+
         $updateTableReferral = false;
 
         // check if there is referral code
@@ -44,14 +52,6 @@ class UserController extends Controller
                 return redirect('/users/create')->withInput($request->only('name', 'email', 'password'))->with('error', 'Referral code inserted is not exist, please check again');
             }
         }
-        
-        $ReferralCode = $this->generateReferralCode();
-
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|string|min:8',
-        ]);
 
         // Add the generated referral code to the validated data
         // $validatedData['referral_code'] = $ReferralCode;
